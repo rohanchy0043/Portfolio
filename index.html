@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohan Chaudhary - Developer Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Devicon Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-200 antialiased">
+  <!-- Three.js canvas container -->
+  <div id="canvas-container"></div>
+
+  <!-- Floating Social Buttons -->
+  <div class="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
+    <a href="https://github.com/rohanchy0043" class="glass w-12 h-12 flex items-center justify-center rounded-full text-2xl backdrop-blur-xl border border-purple-500/30 hover:border-purple-400 transition-all hover:scale-110 float-icon" style="animation-delay: 0s;"><i class="devicon-github-original"></i></a>
+    <a href="https://www.linkedin.com/in/rohan-chaudhary-29a79834b?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="glass w-12 h-12 flex items-center justify-center rounded-full text-2xl backdrop-blur-xl border border-blue-500/30 hover:border-blue-400 transition-all hover:scale-110 float-icon" style="animation-delay: 0.2s;"><i class="devicon-linkedin-plain"></i></a>
+    <a href="https://www.instagram.com/r0hanchy/?utm_source=ig_web_button_share_sheet" class="glass w-12 h-12 flex items-center justify-center rounded-full text-2xl backdrop-blur-xl border border-sky-500/30 hover:border-sky-400 transition-all hover:scale-110 float-icon" style="animation-delay: 0.4s;"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+  <!-- Navbar -->
+  <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 w-11/12 max-w-4xl glass z-40 px-6 py-3 rounded-full">
+    <div class="flex justify-between items-center text-sm font-medium">
+      <span class="text-xl font-bold gradient-text">Rohan Chaudhary</span>
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="hover:text-purple-400 transition">Home</a>
+        <a href="#about" class="hover:text-purple-400 transition">About</a>
+        <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+        <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+        <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+      </div>
+      <div class="md:hidden text-2xl cursor-pointer">☰</div>
+    </div>
+  </nav>
+
+  <main class="relative z-10 pt-24 px-4 max-w-6xl mx-auto">
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center py-20">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4">
+        <span class="gradient-text">Hi, I'm Rohan Chaudhary</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-4">Frontend Developer</p>
+      <p class="max-w-xl text-gray-400 mb-8">As a Web development student, I enjoy designing and developing websites that work smoothly across all devices and screen sizes.</p>
+      <div class="flex gap-4">
+        <a href="#projects" class="px-8 py-3 glass rounded-full border border-purple-500/50 hover:bg-purple-600/30 transition font-semibold">View Projects</a>
+        <a href="#contact" class="px-8 py-3 glass rounded-full border border-blue-500/50 hover:bg-blue-600/30 transition font-semibold">Contact Me</a>
+      </div>
+    </section>
+
+    <!-- About Section with two-column layout -->
+    <section id="about" class="py-20">
+      <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Left Column: Profile & Bio -->
+        <div class="glass p-8 flex flex-col items-center md:items-start space-y-6">
+          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full glass flex items-center justify-center overflow-hidden border-2 border-purple-500/30">
+            <img src="image/aboutme.jpeg" alt="Rohan Chaudhary" class="w-full h-full object-cover">
+          </div>
+          <div class="space-y-4">
+            <p class="text-lg">
+              Hi, I'm Rohan Chaudhary, a Computer Science student with a strong interest in web development and software engineering. 
+              I enjoy creating modern and responsive websites and exploring new technologies.
+              I am currently improving my skills in frontend development and working on personal projects to strengthen my programming knowledge. 
+              My goal is to become a skilled developer and contribute to innovative software solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Column: Education -->
+        <div class="glass p-8">
+          <h3 class="text-2xl font-bold mb-6 gradient-text">My Education</h3>
+          
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-xl font-semibold text-purple-300">Bachelor in Computer Science</h4>
+              <p class="text-gray-400 font-medium">Cambridge Assessment International Education | 2025 - running</p>
+              <p class="text-gray-300 mt-2">Currently pursuing a Bachelor's degree in Computer Science, focusing on programming, software development, and modern computing technologies. The program helps develop problem-solving skills and practical knowledge required for building efficient software and digital solutions.</p>
+            </div>
+            
+            <div>
+              <h4 class="text-xl font-semibold text-purple-300">+2</h4>
+              <p class="text-gray-400 font-medium">Computer Science | (2022 - 2024 AD)</p>
+              <p class="text-gray-300 mt-2">Completed higher secondary education with a focus on computer science, mathematics, and information technology. This level provided a strong foundation in programming basics, computer systems, and logical problem-solving.</p>
+            </div>
+            
+            <div>
+              <h4 class="text-xl font-semibold text-purple-300">SEE</h4>
+              <p class="text-gray-400 font-medium">Board | 2022 AD</p>
+              <p class="text-gray-300 mt-2">SEE is the Secondary Education Examination, a national-level standardized test in Nepal that students take at the end of 10 years of secondary education to gain eligibility for higher education.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+      <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Tech Stack</h2>
+      <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-html5-plain text-5xl text-orange-500 group-hover:scale-110 transition"></i>
+          <span class="font-medium">HTML5</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-css3-plain text-5xl text-blue-500 group-hover:scale-110 transition"></i>
+          <span>CSS</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-javascript-plain text-5xl text-yellow-500 group-hover:scale-110 transition"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-python-plain text-5xl text-yellow-500 group-hover:scale-110 transition"></i>
+          <span>Python</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-figma-plain text-5xl" style="color: #A259FF; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
+          <span>Figma</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-cplusplus-plain colored text-5xl text-cyan-400 group-hover:scale-110 transition"></i>
+          <span>C++</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-react-original text-5xl text-cyan-400 group-hover:scale-110 transition"></i>
+          <span>React</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-nodejs-plain text-5xl text-green-600 group-hover:scale-110 transition"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-mysql-plain text-5xl text-blue-500 group-hover:scale-110 transition"></i>
+          <span>SQL</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-wordpress-plain text-5xl text-blue-600 group-hover:scale-110 transition"></i>
+          <span>WordPress</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center gap-2 group">
+          <i class="devicon-git-plain text-5xl text-red-500 group-hover:scale-110 transition"></i>
+          <span>Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+      <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass-card overflow-hidden group">
+          <div class="h-40 bg-gradient-to-br from-purple-900/60 to-blue-900/60 flex items-center justify-center">
+            <a href="#" class="text-6xl opacity-50">
+              <img src="image/portfolio.png" alt="Portfolio project" class="w-full h-full object-cover">
+            </a>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-semibold mb-2">Portfolio</h3>
+            <p class="text-gray-400 text-sm mb-3">Interactive Three.js scene with Framer Motion animations.</p>
+            <div class="flex gap-3">
+              <a href="#" class="text-sm glass px-3 py-1 rounded-full border border-purple-500/30 hover:bg-purple-500/20">GitHub</a>
+              <a href="#" class="text-sm glass px-3 py-1 rounded-full border border-blue-500/30 hover:bg-blue-500/20">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card overflow-hidden group">
+          <div class="h-40 bg-gradient-to-br from-indigo-900/60 to-pink-900/60 flex items-center justify-center">
+            <span class="text-6xl opacity-50">📱</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-semibold mb-2">AI Chat App</h3>
+            <p class="text-gray-400 text-sm mb-3">Full-stack chatbot with React, Node, and OpenAI.</p>
+            <div class="flex gap-3">
+              <a href="#" class="text-sm glass px-3 py-1 rounded-full border border-purple-500/30 hover:bg-purple-500/20">GitHub</a>
+              <a href="#" class="text-sm glass px-3 py-1 rounded-full border border-blue-500/30 hover:bg-blue-500/20">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card overflow-hidden group">
+          <div class="h-40 bg-gradient-to-br from-blue-900/60 to-purple-900/60 flex items-center justify-center">
+            <span class="text-6xl opacity-50">⚡</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-semibold mb-2">Dev Dashboard</h3>
+            <p class="text-gray-400 text-sm mb-3">Analytics dashboard with charts, real-time updates.</p>
+            <div class="flex gap-3">
+              <a href="#" class="text-sm glass px-3 py-1 rounded-full border border-purple-500/30 hover:bg-purple-500/20">GitHub</a>
+              <a href="#" class="text-sm glass px-3 py-1 rounded-full border border-blue-500/30 hover:bg-blue-500/20">Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Get in Touch</h2>
+      <div class="glass max-w-2xl mx-auto p-8">
+      <form class="space-y-6">
+    <div class="grid md:grid-cols-2 gap-4">
+    <input 
+      type="text" 
+      name="name"
+      placeholder="Name" 
+      autocomplete="name"
+      class="w-full p-3 bg-transparent border border-purple-500/30 rounded-xl focus:outline-none focus:border-purple-400 transition"
+    />
+    <input 
+      type="email" 
+      name="email"
+      placeholder="Email" 
+      autocomplete="email"
+      class="w-full p-3 bg-transparent border border-purple-500/30 rounded-xl focus:outline-none focus:border-purple-400 transition"
+    />
+  </div>
+  <input 
+    type="text" 
+    name="subject"
+    placeholder="Subject" 
+    class="w-full p-3 bg-transparent border border-purple-500/30 rounded-xl focus:outline-none focus:border-purple-400 transition"
+  />
+  <textarea 
+    rows="4" 
+    name="message"
+    placeholder="Message" 
+    class="w-full p-3 bg-transparent border border-purple-500/30 rounded-xl focus:outline-none focus:border-purple-400 transition">
+  </textarea>
+  <button 
+  type="submit"
+    class="px-8 py-3 glass rounded-full border border-purple-500/50 hover:bg-purple-600/30 font-semibold w-full">
+      Send Message
+    </button>
+      </form>
+        <div class="flex justify-center gap-4 mt-6">
+          <a href="https://github.com/rohanchy0043" class="text-3xl text-gray-400 hover:text-purple-400 transition">
+          <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rohan-chaudhary-29a79834b?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="text-3xl text-gray-400 hover:text-blue-400 transition">
+          <i class="fa-brands fa-linkedin"></i>
+          </a>
+        <a href="https://www.instagram.com/r0hanchy/?utm_source=ig_web_button_share_sheet" class="text-3xl text-gray-400 hover:text-pink-400 transition">
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      </div>
+    </section>
+
+    <footer class="text-center py-6 text-gray-500 border-t border-purple-500/20">
+      <p>© 2025 Rohan Chaudhary</p>
+    </footer>
+  </main>
+
+  <!-- Three.js Module Script -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
