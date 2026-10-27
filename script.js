@@ -80,6 +80,150 @@ if (configuredEmail) {
 }
 
 (() => {
+  const wordmark = document.querySelector("[data-wordmark]");
+  if (!wordmark) return;
+
+  const liveText = wordmark.querySelector(".wordmark-live");
+  const prefix = wordmark.querySelector("[data-wordmark-prefix]");
+  const suffix = wordmark.querySelector("[data-wordmark-suffix]");
+  const cursor = wordmark.querySelector(".wordmark-cursor");
+  if (!liveText || !prefix || !suffix || !cursor) return;
+
+  const fullText = "rohan.dev";
+  const prefixText = "rohan";
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let timeoutId = 0;
+  let generation = 0;
+
+  function cancelTimer() {
+    window.clearTimeout(timeoutId);
+    timeoutId = 0;
+  }
+
+  function setText(length) {
+    prefix.textContent = fullText.slice(0, Math.min(length, prefixText.length));
+    suffix.textContent = length > prefixText.length ? fullText.slice(prefixText.length, length) : "";
+  }
+
+  function setStatic() {
+    generation += 1;
+    cancelTimer();
+    setText(fullText.length);
+    liveText.classList.remove("is-fading", "is-empty");
+    cursor.hidden = true;
+  }
+
+  function schedule(callback, delay, token) {
+    timeoutId = window.setTimeout(() => {
+      timeoutId = 0;
+      if (token === generation && !motionPreference.matches) callback();
+    }, delay);
+  }
+
+  function startLoop() {
+    generation += 1;
+    cancelTimer();
+    const token = generation;
+    let typedLength = 0;
+
+    setText(0);
+    liveText.classList.remove("is-fading", "is-empty");
+    cursor.hidden = false;
+
+    function typeNext() {
+      typedLength += 1;
+      setText(typedLength);
+      if (typedLength < fullText.length) {
+        schedule(typeNext, 110, token);
+      } else {
+        schedule(fadeAndClear, 5000, token);
+      }
+    }
+
+    function fadeAndClear() {
+      liveText.classList.add("is-fading");
+      schedule(() => {
+        setText(0);
+        liveText.classList.remove("is-fading");
+        liveText.classList.add("is-empty");
+        schedule(startLoop, 450, token);
+      }, 280, token);
+    }
+
+    schedule(typeNext, 110, token);
+  }
+
+  if (motionPreference.matches) setStatic();
+  else startLoop();
+
+  motionPreference.addEventListener("change", (event) => {
+    if (event.matches) setStatic();
+    else startLoop();
+  });
+})();
+
+(() => {
+  const heading = document.querySelector("[data-scramble-name]");
+  const visualText = heading?.querySelector("[data-name-visual]");
+  if (!heading || !visualText) return;
+
+  const target = Array.from(visualText.textContent.trim());
+  const randomCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*?";
+  const duration = 1600;
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let frameId = 0;
+  let generation = 0;
+
+  function showStatic() {
+    generation += 1;
+    window.cancelAnimationFrame(frameId);
+    visualText.textContent = target.join("");
+    heading.classList.remove("is-shimmering");
+  }
+
+  function startDecode() {
+    generation += 1;
+    window.cancelAnimationFrame(frameId);
+    heading.classList.remove("is-shimmering");
+
+    if (motionPreference.matches) {
+      visualText.textContent = target.join("");
+      return;
+    }
+
+    const token = generation;
+    const startTime = performance.now();
+
+    function renderFrame(now) {
+      if (token !== generation) return;
+      const progress = Math.min((now - startTime) / duration, 1);
+      const resolvedCount = Math.floor(progress * target.length);
+      visualText.textContent = target.map((character, index) => {
+        if (character === " " || index < resolvedCount) return character;
+        return randomCharacters[Math.floor(Math.random() * randomCharacters.length)];
+      }).join("");
+
+      if (progress >= 1) {
+        visualText.textContent = target.join("");
+        heading.classList.add("is-shimmering");
+      } else {
+        frameId = window.requestAnimationFrame(renderFrame);
+      }
+    }
+
+    frameId = window.requestAnimationFrame(renderFrame);
+  }
+
+  if (motionPreference.matches) showStatic();
+  else startDecode();
+
+  motionPreference.addEventListener("change", (event) => {
+    if (event.matches) showStatic();
+    else startDecode();
+  });
+})();
+
+(() => {
   "use strict";
 
   // Behavior and appearance reference: Fayaz Ahmed's robot-heads (MIT).
