@@ -44,12 +44,12 @@ Open index.html directly in a browser. No server or installation is required.
 
 ## Connect a custom domain
 
-1. Replace portfolio.example.com in CNAME with the domain you own.
+1. The CNAME file is set to rohanchaudhary.com.np. Change it only if you use a different domain.
 2. In Settings → Pages, enter the same domain under Custom domain and save it.
 3. At your DNS provider, use the matching record:
    - For a subdomain such as www.example.com, create a CNAME record for www pointing to USERNAME.github.io.
    - For an apex domain such as example.com, create A records for @ pointing to 185.199.108.153, 185.199.109.153, 185.199.110.153, and 185.199.111.153. The GitHub Pages documentation also lists the optional IPv6 records.
-4. Replace portfolio.example.com in robots.txt and every sitemap.xml URL with your real HTTPS domain.
+4. robots.txt and sitemap.xml already use https://rohanchaudhary.com.np. Update them if your domain changes.
 5. After DNS has updated and GitHub has issued a certificate, enable Enforce HTTPS in Settings → Pages.
 
 The CNAME file by itself does not configure DNS or the Pages custom-domain setting. GitHub’s guides explain [publishing from a branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) and [custom-domain DNS](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
