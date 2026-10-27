@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title">
+  <title id="title">RC monogram</title>
+  <rect width="48" height="48" rx="10" fill="#315e47"/>
+  <path d="M10.5 15.5h9.6c5 0 7.9 2.5 7.9 6.6 0 3.1-1.7 5.2-4.6 6.1l5.6 7.1h-6.3l-4.8-6.2h-2v6.2h-5.4V15.5Zm9.2 9.1c1.8 0 2.9-.8 2.9-2.3s-1.1-2.2-2.9-2.2h-3.8v4.5h3.8Z" fill="#f7f6f2"/>
+  <path d="M37.3 19.5a6.8 6.8 0 1 0 0 9.1" fill="none" stroke="#dce7d9" stroke-linecap="round" stroke-width="3"/>
+</svg>

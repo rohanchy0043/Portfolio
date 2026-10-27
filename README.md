@@ -1,67 +1,55 @@
-# Rohan Chaudhary — Developer Portfolio
+# rohan.dev — Personal Developer Portfolio
 
-A responsive portfolio built with the Next.js App Router, TypeScript, Tailwind CSS v4, and Lucide icons. Next.js exports plain static files into `out/`; the published site does not need a Node.js server, API, database, or paid service. The project case studies are generated at build time. Their preview panels are concept illustrations, not screenshots of deployed products.
+A warm, editorial portfolio for Rohan Chaudhary, a Computer Science student in Kathmandu, Nepal. It uses only HTML, CSS, and vanilla JavaScript. There is no Node.js, package installation, build step, backend, or database.
 
-## Run locally
+## Project files
 
-Use Node.js 20.9 or newer and npm:
+    index.html       Home page
+    about.html       About page
+    projects.html    Project notes and concepts
+    style.css        Shared responsive styles
+    script.js        Navigation, reveal motion, email links, and current year
+    favicon.svg      RC monogram
+    robots.txt       Crawler guidance
+    sitemap.xml      Sitemap using the domain placeholder
+    CNAME            Custom-domain placeholder
 
-```bash
-npm ci
-npm run dev
-```
+All local page and asset links are relative, so the site also works at a GitHub Pages project URL such as https://USERNAME.github.io/REPOSITORY/.
 
-Open `http://localhost:3000`. To create the production site locally:
+## Edit before publishing
 
-```bash
-npm run typecheck
-npm run build
-```
+- Update project descriptions, actual contributions, status, and technology stacks in projects.html. The current projects are editable examples marked as concepts. No repository or live-demo URLs were supplied, so none have been invented.
+- Update the technology lists in index.html and about.html to reflect what you can confidently discuss.
+- Add your public email in the siteConfig.email value near the top of script.js. Email links stay hidden until an address is configured.
+- Replace the placeholder domain in CNAME, robots.txt, and sitemap.xml with your actual domain. CNAME must contain only the domain name on one line.
+- If your profile URLs change, edit the GitHub and LinkedIn links in each HTML page.
+- DM Sans and DM Mono load from Google Fonts when available. System font fallbacks are included.
 
-The static website is written to `out/`. Open `out/index.html` with a local static server to review the exported files; `next start` is not used for deployment.
+## Open locally
 
-## Personalize the content
+Open index.html directly in a browser. No server or installation is required.
 
-- Edit your display name, headline, location, email, social links, website URL, availability, about text, education, and optional services in `lib/site-config.ts`.
-- Update `public/opengraph-image.svg` if you change the name or visual branding shown in the social sharing card.
-- Skills are examples in `data/skills.ts`; remove any entry you cannot confidently claim.
-- Project summaries and optional implementation notes, technologies, screenshots, and links belong in `data/projects.ts`. The three current entries are concepts with no claimed implementation, demo, repository, or stack.
-- Add real screenshots under `public/images/` and update `ProjectPreview`/project data when they are available.
-- The contact form validates in the browser and opens a prefilled email draft. Set `email` in `lib/site-config.ts` to enable that handoff. Visitors still need to send the draft from their email app; the site does not send or store messages. Until an email is configured, the form explains that it is unavailable and points visitors to LinkedIn.
-- Set `services.show` to `false` in `lib/site-config.ts` to hide the freelance services section.
-- `public/CNAME` currently contains `www.rohanchaudhary.com.np`, carried forward from the existing portfolio. Replace it and `siteUrl` if you choose a different custom domain. A CNAME file alone does not configure DNS or prove that the domain points to GitHub Pages.
+## Deploy to GitHub Pages
 
-## Deploy with GitHub Pages
+1. Create a repository on GitHub, or use an existing repository. For GitHub Free, the repository must be public for Pages.
+2. Upload these files to the repository root and push them to the main branch. From PowerShell, the Git commands are:
 
-1. Create a GitHub repository and push this project to its `main` branch.
-2. In the repository, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.
-3. The workflow in `.github/workflows/deploy.yml` installs the locked dependencies, checks TypeScript, builds the static export, and deploys `out/` when changes are pushed to `main`. It can also be run manually from the Actions tab.
-4. For the existing custom domain, enter `www.rohanchaudhary.com.np` in **Settings → Pages → Custom domain**. GitHub Actions does not configure your DNS provider. For this `www` subdomain, create a DNS `CNAME` record for `www` pointing to `rohanchy0043.github.io` (without a repository name).
-5. If you use an apex domain instead, configure DNS with one of these supported options:
-   - `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`.
-   - `AAAA` records for `@` if using IPv6: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, and `2606:50c0:8003::153`.
-   - Or a supported `ALIAS`/`ANAME` record for `@` pointing to `rohanchy0043.github.io`.
-6. After DNS resolves and GitHub makes a certificate available, enable **Enforce HTTPS** in **Settings → Pages**. DNS changes and certificate issuance can take time.
-GitHub’s guides cover [Pages deployment with a custom workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and [custom domain and DNS setup](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+       git add -A
+       git commit -m "Add rohan.dev portfolio"
+       git push origin main
 
-### Project repository URL instead of a custom domain
+3. In the repository, open Settings → Pages.
+4. Under Build and deployment, choose Deploy from a branch, select main, and choose the root folder (/) as the publishing source.
+5. Save the setting and wait for the Pages deployment. For an account site, use a repository named USERNAME.github.io. Other repository names use a project URL under /REPOSITORY/.
 
-For a repository site such as `https://rohanchy0043.github.io/portfolio/`, set `NEXT_PUBLIC_BASE_PATH` to `/portfolio` for both the local build and the workflow build. Also change `siteUrl` in `lib/site-config.ts` to `https://rohanchy0043.github.io` and remove `public/CNAME` (a custom domain uses the root path). In `.github/workflows/deploy.yml`, add this under the `Build static site` step:
+## Connect a custom domain
 
-```yaml
-env:
-  NEXT_PUBLIC_BASE_PATH: /portfolio
-```
+1. Replace portfolio.example.com in CNAME with the domain you own.
+2. In Settings → Pages, enter the same domain under Custom domain and save it.
+3. At your DNS provider, use the matching record:
+   - For a subdomain such as www.example.com, create a CNAME record for www pointing to USERNAME.github.io.
+   - For an apex domain such as example.com, create A records for @ pointing to 185.199.108.153, 185.199.109.153, 185.199.110.153, and 185.199.111.153. The GitHub Pages documentation also lists the optional IPv6 records.
+4. Replace portfolio.example.com in robots.txt and every sitemap.xml URL with your real HTTPS domain.
+5. After DNS has updated and GitHub has issued a certificate, enable Enforce HTTPS in Settings → Pages.
 
-Replace `/portfolio` with the exact repository name, including its capitalization. `next.config.ts` applies this base path to routes and static assets, while sitemap, robots, canonical, and social metadata use the configured site URL and path.
-
-## Project structure
-
-```text
-app/                 Pages, layout, SEO metadata, sitemap, robots, styles
-components/          Navigation, page sections, project cards and details
-data/                Editable project and skill data
-lib/                 Personal configuration and contact validation
-public/              Static assets and custom-domain CNAME
-.github/workflows/   GitHub Pages build and deployment
-```
+The CNAME file by itself does not configure DNS or the Pages custom-domain setting. GitHub’s guides explain [publishing from a branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) and [custom-domain DNS](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
