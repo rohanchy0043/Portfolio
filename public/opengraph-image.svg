@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Rohan Chaudhary — Web Developer</title>
+  <desc id="desc">Computer Science student and web developer in Nepal, building thoughtful digital experiences.</desc>
+  <rect width="1200" height="630" fill="#fff"/>
+  <rect x="34" y="34" width="1132" height="562" rx="18" fill="none" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="88" y="78" width="60" height="60" rx="14" fill="#f7f9fe" stroke="#d7e1f6" stroke-width="2"/>
+  <text x="118" y="116" text-anchor="middle" fill="#214fba" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">RC</text>
+  <text x="170" y="117" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600">Rohan Chaudhary</text>
+  <text x="88" y="300" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700" letter-spacing="-3">Building thoughtful</text>
+  <text x="88" y="382" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700" letter-spacing="-3">digital experiences.</text>
+  <rect x="88" y="420" width="46" height="4" fill="#2563eb"/>
+  <text x="88" y="478" fill="#737373" font-family="Arial, Helvetica, sans-serif" font-size="22">Computer Science student · Web developer · Nepal</text>
+</svg>
