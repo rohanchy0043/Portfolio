@@ -5,8 +5,8 @@ A responsive portfolio for Rohan Chaudhary, built with static HTML, CSS, and van
 ## Project files
 
     index.html          Home page
-    about/index.html    About page (/about/)
-    projects/index.html Project details and concepts (/projects/)
+    about/index.html    About page (/about)
+    projects/index.html Project details and concepts (/projects)
     about.html          Legacy URL redirect
     projects.html       Legacy URL redirect
     style.css           Shared portfolio styles
