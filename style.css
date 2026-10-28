@@ -112,11 +112,11 @@ button { font: inherit; }
 .tag-muted { border-style: dashed; color: #858c84; }
 .project-side { min-width: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; gap: 12px; }
 .project-preview { position: relative; height: clamp(105px, 7vw, 125px); overflow: hidden; border: 1px solid #e6e9e2; background: #f5f6f1; transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
-.project-card.project-card-dormsync .project-preview { height: clamp(190px, 17vw, 235px); }
+.project-card.project-card-dormsync .project-preview { height: auto; aspect-ratio: 1900 / 924; }
 .project-card:hover .project-preview { transform: scale(1.025); }
 .preview-label { position: absolute; z-index: 1; top: 9px; left: 11px; color: #81877f; font-family: var(--mono); font-size: 8px; letter-spacing: .1em; }
 .preview-dormsync { background: #111827; }
-.dormsync-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
+.dormsync-image { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; }
 .preview-menu { background: linear-gradient(130deg, #fbf7ec 0 50%, #edf1e8 50%); }
 .preview-menu-mark { position: absolute; top: 42px; left: 18px; color: #374239; font-family: var(--mono); font-size: 25px; font-weight: 500; letter-spacing: -.08em; }
 .preview-menu-mark span { color: var(--green); }
@@ -326,7 +326,7 @@ button { font: inherit; }
   .project-side, .project-card-detailed .project-side { flex-direction: row; align-items: center; gap: 10px; }
   .project-card-dormsync .project-side { flex-direction: column; align-items: stretch; }
   .project-preview, .project-card-detailed .project-preview { height: 82px; min-width: 0; flex: 1 1 auto; }
-  .project-card-dormsync .project-preview { height: clamp(150px, 52vw, 230px); width: 100%; flex: none; }
+  .project-card-dormsync .project-preview { width: 100%; height: auto; aspect-ratio: 1900 / 924; flex: none; }
   .project-meta, .project-card-detailed .project-meta { min-width: 96px; margin: 0; padding: 0; align-items: flex-end; justify-content: center; gap: 7px; }
   .project-card-dormsync .project-meta { min-width: 0; align-items: center; justify-content: space-between; }
   .status-pill { padding: 3px 6px; font-size: 8px; }
