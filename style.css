@@ -113,6 +113,8 @@ button { font: inherit; }
 .project-preview { position: relative; height: clamp(105px, 7vw, 125px); overflow: hidden; border: 1px solid #e6e9e2; background: #f5f6f1; transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
 .project-card:hover .project-preview { transform: scale(1.025); }
 .preview-label { position: absolute; z-index: 1; top: 9px; left: 11px; color: #81877f; font-family: var(--mono); font-size: 8px; letter-spacing: .1em; }
+.preview-dormsync { background: #111827; }
+.dormsync-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
 .preview-menu { background: linear-gradient(130deg, #fbf7ec 0 50%, #edf1e8 50%); }
 .preview-menu-mark { position: absolute; top: 42px; left: 18px; color: #374239; font-family: var(--mono); font-size: 25px; font-weight: 500; letter-spacing: -.08em; }
 .preview-menu-mark span { color: var(--green); }
@@ -150,10 +152,11 @@ button { font: inherit; }
 .local-block span { width: 90px; height: 4px; background: #e0ddd5; }
 .local-block span:last-child { width: 58px; }
 .local-sun { position: absolute; top: 31px; right: 30px; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #e4c888, #f1e3bd); }
-.project-meta { display: flex; align-items: center; justify-content: space-between; gap: 9px; }
+.project-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 9px; }
 .status-pill { padding: 5px 8px; display: inline-flex; align-items: center; gap: 6px; background: var(--green-soft); color: #526c59; font-family: var(--mono); font-size: 10px; white-space: nowrap; }
 .status-pill i { width: 6px; height: 6px; border-radius: 50%; background: #6b9471; }
-.card-link { color: #626962; font-family: var(--mono); font-size: 11px; white-space: nowrap; }
+.card-link { display: inline-flex; align-items: center; gap: 5px; color: #626962; font-family: var(--mono); font-size: 11px; white-space: nowrap; }
+.card-link .social-icon { width: 12px; height: 12px; }
 .all-projects-link { padding: 22px 0 0; text-align: center; }
 
 /* About and callout cards */

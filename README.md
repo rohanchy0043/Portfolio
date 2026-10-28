@@ -6,7 +6,7 @@ A responsive portfolio for Rohan Chaudhary, built with static HTML, CSS, and van
 
     index.html          Home page
     about.html          About page
-    projects.html       Project notes and concepts
+    projects.html       Project details and concepts
     style.css           Shared portfolio styles
     script.js           Site interactions and animated Canvas robot
     favicon.svg         RC monogram
@@ -18,7 +18,7 @@ The portfolio and its robot avatar use only browser APIs. There is no framework,
 
 ## Edit before publishing
 
-- Update project descriptions and technologies in `projects.html` to reflect your confirmed work. The current project entries are concepts.
+- Update project descriptions and technologies in `projects.html` to reflect confirmed work. Concept entries are labeled; add demo and repository links when available.
 - Add your public email to the `siteConfig.email` value near the top of `script.js`. Email links stay hidden until an address is configured.
 - If your profile URLs change, edit the GitHub and LinkedIn links in the HTML pages.
 - The portfolio’s `CNAME`, `robots.txt`, and `sitemap.xml` currently use `rohanchaudhary.com.np`.
