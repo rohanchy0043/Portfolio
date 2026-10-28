@@ -117,6 +117,8 @@ button { font: inherit; }
 .preview-label { position: absolute; z-index: 1; top: 9px; left: 11px; color: #81877f; font-family: var(--mono); font-size: 8px; letter-spacing: .1em; }
 .preview-dormsync { background: #111827; }
 .dormsync-image { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; }
+.preview-ashbound { background: #171a18; }
+.ashbound-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
 .preview-menu { background: linear-gradient(130deg, #fbf7ec 0 50%, #edf1e8 50%); }
 .preview-menu-mark { position: absolute; top: 42px; left: 18px; color: #374239; font-family: var(--mono); font-size: 25px; font-weight: 500; letter-spacing: -.08em; }
 .preview-menu-mark span { color: var(--green); }
@@ -157,6 +159,8 @@ button { font: inherit; }
 .project-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 9px; }
 .status-pill { padding: 5px 8px; display: inline-flex; align-items: center; gap: 6px; background: var(--green-soft); color: #526c59; font-family: var(--mono); font-size: 10px; white-space: nowrap; }
 .status-pill i { width: 6px; height: 6px; border-radius: 50%; background: #6b9471; }
+.status-coming-soon { background: #f3eee6; color: #806848; }
+.status-coming-soon i { background: #c39359; }
 .card-link { display: inline-flex; align-items: center; gap: 5px; color: #626962; font-family: var(--mono); font-size: 11px; white-space: nowrap; }
 .card-link .social-icon { width: 12px; height: 12px; }
 .all-projects-link { padding: 22px 0 0; text-align: center; }
