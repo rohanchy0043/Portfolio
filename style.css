@@ -118,7 +118,7 @@ button { font: inherit; }
 .preview-dormsync { background: #111827; }
 .dormsync-image { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; }
 .preview-ashbound { background: #171a18; }
-.ashbound-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
+.ashbound-image { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; }
 .preview-menu { background: linear-gradient(130deg, #fbf7ec 0 50%, #edf1e8 50%); }
 .preview-menu-mark { position: absolute; top: 42px; left: 18px; color: #374239; font-family: var(--mono); font-size: 25px; font-weight: 500; letter-spacing: -.08em; }
 .preview-menu-mark span { color: var(--green); }

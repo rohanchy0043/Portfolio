@@ -7,8 +7,6 @@ A responsive portfolio for Rohan Chaudhary, built with static HTML, CSS, and van
     index.html          Home page
     about.html          About page (/about)
     projects.html       Project details and concepts (/projects)
-    about-legacy.html   Legacy URL redirect
-    projects-legacy.html Legacy URL redirect
     style.css           Shared portfolio styles
     script.js           Site interactions and animated Canvas robot
     favicon.svg         RC monogram
