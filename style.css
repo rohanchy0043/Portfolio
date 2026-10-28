@@ -98,7 +98,7 @@ button { font: inherit; }
 .text-link:hover span, .card-link:hover span { transform: translateX(3px); }
 .project-list { display: grid; gap: 14px; }
 .project-card { position: relative; min-height: 225px; padding: clamp(20px, 2vw, 30px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(180px, 220px); gap: clamp(20px, 2.4vw, 34px); overflow: hidden; border: 1px solid var(--line); background: var(--surface); transition: transform .28s cubic-bezier(.2, .7, .2, 1), border-color .25s ease, box-shadow .28s ease; }
-.project-card.project-card-dormsync { min-height: 275px; grid-template-columns: minmax(0, 1fr) minmax(320px, 40%); }
+.project-card.project-card-featured { min-height: 275px; grid-template-columns: minmax(0, 1fr) minmax(320px, 40%); }
 .project-card::before { position: absolute; top: 0; bottom: 0; left: 0; width: 3px; background: var(--green); content: ""; transform: scaleY(0); transform-origin: bottom; transition: transform .28s ease; }
 .project-card:hover { z-index: 1; border-color: #d4ddd4; box-shadow: 0 12px 32px rgba(30, 43, 34, .08); transform: translateY(-3px); }
 .project-card:hover::before { transform: scaleY(1); }
@@ -112,7 +112,7 @@ button { font: inherit; }
 .tag-muted { border-style: dashed; color: #858c84; }
 .project-side { min-width: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; gap: 12px; }
 .project-preview { position: relative; height: clamp(105px, 7vw, 125px); overflow: hidden; border: 1px solid #e6e9e2; background: #f5f6f1; transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
-.project-card.project-card-dormsync .project-preview { height: auto; aspect-ratio: 1900 / 924; }
+.project-card.project-card-featured .project-preview { height: auto; aspect-ratio: 1900 / 924; }
 .project-card:hover .project-preview { transform: scale(1.025); }
 .preview-label { position: absolute; z-index: 1; top: 9px; left: 11px; color: #81877f; font-family: var(--mono); font-size: 8px; letter-spacing: .1em; }
 .preview-dormsync { background: #111827; }
@@ -258,7 +258,7 @@ button { font: inherit; }
 /* Tablet */
 @media (max-width: 1000px) {
   .project-card { grid-template-columns: minmax(0, 1fr) minmax(190px, 220px); }
-  .project-card.project-card-dormsync { grid-template-columns: minmax(0, 1fr) minmax(320px, 40%); }
+  .project-card.project-card-featured { grid-template-columns: minmax(0, 1fr) minmax(320px, 40%); }
   .project-card-detailed { padding: 24px; }
   .article-body { max-width: 100%; }
 }
@@ -321,18 +321,18 @@ button { font: inherit; }
   .section-heading > .text-link { font-size: 9px; }
   .project-list { gap: 11px; }
   .project-card, .project-card-detailed { grid-template-columns: minmax(0, 1fr); gap: 13px; padding: 17px; }
-  .project-card.project-card-dormsync { grid-template-columns: minmax(0, 1fr); }
+  .project-card.project-card-featured { grid-template-columns: minmax(0, 1fr); }
   .project-card h2, .project-card h3 { font-size: 14px; }
   .project-index { font-size: 10px; }
   .project-description { margin: 9px 0 11px; font-size: 11px; line-height: 1.65; }
   .tag-list { gap: 5px; }
   .tag { padding: 2px 7px; font-size: 8px; }
   .project-side, .project-card-detailed .project-side { flex-direction: row; align-items: center; gap: 10px; }
-  .project-card-dormsync .project-side { flex-direction: column; align-items: stretch; }
+  .project-card-featured .project-side { flex-direction: column; align-items: stretch; }
   .project-preview, .project-card-detailed .project-preview { height: 82px; min-width: 0; flex: 1 1 auto; }
-  .project-card-dormsync .project-preview { width: 100%; height: auto; aspect-ratio: 1900 / 924; flex: none; }
+  .project-card-featured .project-preview { width: 100%; height: auto; aspect-ratio: 1900 / 924; flex: none; }
   .project-meta, .project-card-detailed .project-meta { min-width: 96px; margin: 0; padding: 0; align-items: flex-end; justify-content: center; gap: 7px; }
-  .project-card-dormsync .project-meta { min-width: 0; align-items: center; justify-content: space-between; }
+  .project-card-featured .project-meta { min-width: 0; align-items: center; justify-content: space-between; }
   .status-pill { padding: 3px 6px; font-size: 8px; }
   .card-link { font-size: 9px; }
   .preview-label { top: 6px; left: 7px; font-size: 6px; }
